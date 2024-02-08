@@ -1,0 +1,2 @@
+main : main.c is_all_letters_found.c get_random_word.c get_correct_letters_array.c display_hang_man.c display_guessed_letters.c display_correct_letters.c add_input_into_guessed_array.c
+	gcc -o build/hangman main.c is_all_letters_found.c get_random_word.c get_correct_letters_array.c display_hang_man.c display_guessed_letters.c display_correct_letters.c add_input_into_guessed_array.c -I.
