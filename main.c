@@ -3,22 +3,22 @@
 #include <time.h>
 #include <ctype.h>
 
-#include <is_all_letters_found.c>
-#include <get_random_word.c>
-#include <get_correct_letters_array.c>
-#include <display_hang_man.c>
-#include <display_guessed_letters.c>
-#include <display_correct_letters.c>
-#include <add_input_into_guessed_array.c>
+//#include <is_all_letters_found.c>
+//#include <get_random_word.c>
+//#include <get_correct_letters_array.c>
+//#include <display_hang_man.c>
+//#include <display_guessed_letters.c>
+//#include <display_correct_letters.c>
+//#include <add_input_into_guessed_array.c>
 
-//void isAllLettersFound(int*,char*, char*, int , int );
-//void getRandomWord(char*[] , int* );
-//void getCorrectLettersArray(char* , char* , int* );
-//void displayHangMan(int );
-//void displayGuessedLetters(char* , char* , char* , int , int , int );
-//void displayCorrectLetters(char* , char* , int , int );
-//void addInputIntoGuessedArray(int* , int* , char* , char* , char* , int* , int* );
-
+void is_all_letters_found(int* allCorrect,char* guessedLetters, char* correctLetters, int guessedLettersLength, int correctLettersLength);
+void get_random_word(char* outP, int* length);
+void get_correct_letters_array(char* inP, char* outP, int* length);
+void display_hang_man(int failures);
+void display_guessed_letters(char* guessedLetters, char* answer, char* correctLetters, int guessedLettersLength, int answerLength, int correctLettersLength);
+void display_correct_letters(char* guessedLetters, char* answer, int guessedLettersLength, int answerLength);
+void add_input_into_guessed_array(int* correctGuess, int* hasBeenGuessedAlready, char* guessedLetter, char* guessedLetters, char* correctLetters, int* guessedLettersLength, int* correctLettersLength);
+int game();
 
 int main() {
 	time_t currentTime;
@@ -39,7 +39,7 @@ int game() {
 
 	int finalDisplay = 0;
 
-	getRandomWord(&answer, &answerLength);
+	get_random_word(answer, &answerLength);
 
 	//printf("[ %s ] %d answer\n", answer, answerLength);
 
@@ -57,7 +57,7 @@ int game() {
 	char correctLetters[27];
 	int correctLettersLength = 0;
 
-	getCorrectLettersArray(answer, &correctLetters, &correctLettersLength);
+	get_correct_letters_array(answer, correctLetters, &correctLettersLength);
 
 	//printf("[ %s ] %d correctLetters\n", correctLetters, correctLettersLength);
 
@@ -73,9 +73,9 @@ int game() {
 		printf("      |       |  ");
 
 		//display guessed letters
-		displayCorrectLetters(guessedLetters, answer, guessedLettersLength, answerLength);
-		displayGuessedLetters(guessedLetters, answer, correctLetters, guessedLettersLength, answerLength, correctLettersLength);
-		displayHangMan(failures);
+		display_correct_letters(guessedLetters, answer, guessedLettersLength, answerLength);
+		display_guessed_letters(guessedLetters, answer, correctLetters, guessedLettersLength, answerLength, correctLettersLength);
+		display_hang_man(failures);
 		// -
 
 
@@ -96,7 +96,7 @@ int game() {
 		int allCorrect = 1;
 
 		if (finalDisplay == 0) {
-			addInputIntoGuessedArray(&correctGuess, &hasBeenGuessedAlready, &guessedLetter, &guessedLetters, &correctLetters, &guessedLettersLength, &correctLettersLength);
+			add_input_into_guessed_array(&correctGuess, &hasBeenGuessedAlready, &guessedLetter, guessedLetters, correctLetters, &guessedLettersLength, &correctLettersLength);
 
 			if (correctGuess == 1) {
 				printf("%c is correct!\n", guessedLetter);
@@ -109,7 +109,7 @@ int game() {
 				printf("%c already guessed!\n", guessedLetter);
 			}
 
-			isAllLettersFound(&allCorrect, &guessedLetters, &correctLetters, guessedLettersLength, correctLettersLength);
+			is_all_letters_found(&allCorrect, guessedLetters, correctLetters, guessedLettersLength, correctLettersLength);
 		}
 
 
@@ -140,7 +140,7 @@ int game() {
 		printf("\nWINNER!\n\n");
 	}
 	else {
-		printf("\LOSER!\n\n");
+		printf("LOSER!\n\n");
 	}
 
 	printf("\n\n\n game over!");

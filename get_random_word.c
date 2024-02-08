@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-void getRandomWord(char* outP, int* length)
+void get_random_word(char* outP, int* length)
 {
     char words[10][5] = {
         "snake",

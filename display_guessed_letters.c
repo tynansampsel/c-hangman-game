@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-void displayGuessedLetters(char* guessedLetters, char* answer, char* correctLetters, int guessedLettersLength, int answerLength, int correctLettersLength)
+void display_guessed_letters(char* guessedLetters, char* answer, char* correctLetters, int guessedLettersLength, int answerLength, int correctLettersLength)
 {
 	printf("      |       |  ");
 

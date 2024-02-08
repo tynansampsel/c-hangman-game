@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-void displayCorrectLetters(char* guessedLetters, char* answer, int guessedLettersLength, int answerLength)
+void display_correct_letters(char* guessedLetters, char* answer, int guessedLettersLength, int answerLength)
 {
 	//printf("ee%d", answerLength);
 

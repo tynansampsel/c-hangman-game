@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-void isAllLettersFound(int* allCorrect,char* guessedLetters, char* correctLetters, int guessedLettersLength, int correctLettersLength)
+void is_all_letters_found(int* allCorrect,char* guessedLetters, char* correctLetters, int guessedLettersLength, int correctLettersLength)
 {
 	for (int i = 0; i < correctLettersLength; i++) {
 

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-void getCorrectLettersArray(char* inP, char* outP, int* length)
+void get_correct_letters_array(char* inP, char* outP, int* length)
 {
     int l = 0;
     while (*inP) {

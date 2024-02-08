@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-void displayHangMan(int failures)
+void display_hang_man(int failures)
 {
 	if (failures == 0)
 	{

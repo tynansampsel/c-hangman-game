@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-void addInputIntoGuessedArray(int* correctGuess, int* hasBeenGuessedAlready, char* guessedLetter, char* guessedLetters, char* correctLetters, int* guessedLettersLength, int* correctLettersLength)
+void add_input_into_guessed_array(int* correctGuess, int* hasBeenGuessedAlready, char* guessedLetter, char* guessedLetters, char* correctLetters, int* guessedLettersLength, int* correctLettersLength)
 {
 	
 	//printf("%c guessed\n", *guessedLetter);
