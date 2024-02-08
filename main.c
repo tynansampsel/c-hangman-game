@@ -74,6 +74,7 @@ int game() {
 
 		//display guessed letters
 		display_correct_letters(guessedLetters, answer, guessedLettersLength, answerLength);
+		printf("      |       |  \n");
 		display_guessed_letters(guessedLetters, answer, correctLetters, guessedLettersLength, answerLength, correctLettersLength);
 		display_hang_man(failures);
 		// -
@@ -141,6 +142,7 @@ int game() {
 	}
 	else {
 		printf("LOSER!\n\n");
+		printf("the word was %s. \n\n", answer);
 	}
 
 	printf("\n\n\n game over!");
