@@ -7,21 +7,14 @@ void is_all_letters_found(int* allCorrect,char* guessedLetters, char* correctLet
 	for (int i = 0; i < correctLettersLength; i++) {
 
 		int hasLetter = 0;
-		//printf("<%c>\n", *(correctLetters + i));
-
 		for (int j = 0; j < guessedLettersLength; j++) {
 			
-
 			if (*(correctLetters+i) == *(guessedLetters+j)) {
-				//printf("correct:%c %c \n", *(correctLetters + i), *(guessedLetters + j));
-
 				hasLetter = 1;
 			}
 		}
 
 		if (hasLetter == 0) {
-			//printf("problem\n");
-
 			*allCorrect = 0;
 		}
 	}

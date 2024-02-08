@@ -26,8 +26,6 @@ void get_random_word(char* outP, int* length)
     int l = 0;
 
     for (int i = 0; i < 5; i++) {
-        //printf("[ %c ]\n", words[chosenWord][i]);
-
         *outP = words[chosenWord][i];
 
         outP++;

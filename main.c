@@ -3,14 +3,6 @@
 #include <time.h>
 #include <ctype.h>
 
-//#include <is_all_letters_found.c>
-//#include <get_random_word.c>
-//#include <get_correct_letters_array.c>
-//#include <display_hang_man.c>
-//#include <display_guessed_letters.c>
-//#include <display_correct_letters.c>
-//#include <add_input_into_guessed_array.c>
-
 void is_all_letters_found(int* allCorrect,char* guessedLetters, char* correctLetters, int guessedLettersLength, int correctLettersLength);
 void get_random_word(char* outP, int* length);
 void get_correct_letters_array(char* inP, char* outP, int* length);
@@ -41,8 +33,6 @@ int game() {
 
 	get_random_word(answer, &answerLength);
 
-	//printf("[ %s ] %d answer\n", answer, answerLength);
-
 	char guessedLetters[27];
 	int guessedLettersLength = 0;
 
@@ -58,8 +48,6 @@ int game() {
 	int correctLettersLength = 0;
 
 	get_correct_letters_array(answer, correctLetters, &correctLettersLength);
-
-	//printf("[ %s ] %d correctLetters\n", correctLetters, correctLettersLength);
 
 
 	do {

@@ -22,12 +22,6 @@ void display_guessed_letters(char* guessedLetters, char* answer, char* correctLe
 			printf("%c ", guessedLetters[i]);
 
 			notCorrectlyGuessedLetters++;
-			//printf("%", notCorrectlyGuessedLetters);
-
-			if (notCorrectlyGuessedLetters > 5) {
-				//printf("      |       |  ");
-
-			}
 		}
 	}
 	printf("\n");
